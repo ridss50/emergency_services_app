@@ -1,8 +1,8 @@
 import axios from "axios";
 import { Ambulance, Doctor, PaginatedResponse } from "../types";
 
-// const API_BASE_URL = "http://localhost:5000/api";
-const API_BASE_URL = "https://emergency-services-app-2.onrender.com/api";
+const API_BASE_URL = "http://localhost:5000/api";
+// const API_BASE_URL = "https://emergency-services-app-2.onrender.com/api";
 
 const api = axios.create({
   baseURL: API_BASE_URL,
@@ -51,5 +51,6 @@ export const doctorService = {
 
   getCount: () => api.get<{ count: number }>("/doctors/count"),
 };
+
 
 
